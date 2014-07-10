@@ -18,4 +18,4 @@ RUN \
 	make -j`nproc` install && \
 	rm -rf /tmp/nginx-1.6.0*
 
-ENTRYPOINT ["/usr/local/sbin/nginx", "-g", "daemon off;"]
+ENTRYPOINT ["/usr/local/sbin/nginx", "-g", "daemon off; error_log /dev/stdout info;"]
